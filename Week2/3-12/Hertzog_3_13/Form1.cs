@@ -23,7 +23,8 @@ namespace Hertzog_3_13
         {
 
         }
-
+        //Onclick for calc button
+        //Takes in data from textboxes, calculates, and displays information in textboxes
         private void CalcButton_Click(object sender, EventArgs e)
         {
             //constants
@@ -64,6 +65,11 @@ namespace Hertzog_3_13
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

@@ -50,6 +50,7 @@ namespace Hertzog_3_12
             }
             else
             {
+                //else show error message
                 MessageBox.Show("Please enter a value for the property price");
             }
 
