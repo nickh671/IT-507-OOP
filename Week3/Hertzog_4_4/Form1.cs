@@ -20,11 +20,14 @@ namespace Hertzog_4_4
         {
             InitializeComponent();
         }
-        
+
+        //once the radio button is checked, it sets the color1 var to red
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             color1 = "Red";
         }
+        //function for onclick of exit button
+        //this closes the window
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
@@ -87,26 +90,31 @@ namespace Hertzog_4_4
             }
         }
 
+        //once the radio button is checked, it sets the color1 var to blue
         private void BlueButton1_CheckedChanged(object sender, EventArgs e)
         {
             color1 = "Blue";
         }
 
+        //once the radio button is checked, it sets the color1 var to yellow
         private void YellowButton1_CheckedChanged(object sender, EventArgs e)
         {
             color1 = "Yellow";
         }
 
+        //once the radio button is checked, it sets the color1 var to red
         private void RedButton2_CheckedChanged(object sender, EventArgs e)
         {
             color2 = "Red";
         }
 
+        //once the radio button is checked, it sets the color1 var to blue
         private void BlueButton2_CheckedChanged(object sender, EventArgs e)
         {
             color2 = "Blue";
         }
 
+        //once the radio button is checked, it sets the color1 var to yellow
         private void YellowButton2_CheckedChanged(object sender, EventArgs e)
         {
             color2 = "Yellow";

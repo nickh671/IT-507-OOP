@@ -30,7 +30,7 @@ namespace Hertzog_4_12
             List<string> names = new List<string> { "Handling Stress", "Time Management", "Supervision Skills", "Negotiation", "How to Interview" };
             List<int> days = new List<int> { 3, 3, 3, 5, 1 };
             List<double> fees = new List<double> { 1000, 800, 1500, 1300, 500 };
-
+            //saving fields as separate lists, making a forloop to create new workshop objects
             for(int i = 0; i < names.Count; i++)
             {
                 workshops.Add(new Workshop(names[i], days[i], fees[i]));
@@ -40,9 +40,9 @@ namespace Hertzog_4_12
         //building the locations list
         private void BuildLocations()
         {
-            List<string> names = new List<string> { "Austin", "Colorado", "Dallas", "Orlando", "Phoenix", "Raleigh" };
+            List<string> names = new List<string> { "Austin", "Chicago", "Dallas", "Orlando", "Phoenix", "Raleigh" };
             List<double> fees = new List<double> { 150, 225, 175, 300, 175, 150 }; 
-
+            //saving the fields to separate lists and then using a loop to create new location objects
             for (int i = 0; i < names.Count; i++)
             {
                 locations.Add(new Location(names[i], fees[i]));
@@ -52,12 +52,13 @@ namespace Hertzog_4_12
         //onclick function for the button
         private void S_Click(object sender, EventArgs e)
         {
+            //gets the location name selected and the workshop that was selected
             string locName = locationListBox.SelectedItem.ToString();
             string workName = workshopListBox.SelectedItem.ToString();
             calculate(locName, workName);
         }
 
-        //function to calculate
+        //function to calculate the lodging cost/total cost of the workshop
         private void calculate(string locName, string workName)
         {
             //variables to hold our workshop and location we are attending
@@ -81,6 +82,7 @@ namespace Hertzog_4_12
                     loc = locations[i];
                 }
             }
+            
 
             //do our calculations
             double registration = ws.fee;
@@ -88,7 +90,8 @@ namespace Hertzog_4_12
             double total = registration + lodging;
 
             //build a string and show it in a message box
-            string result = "Registration: $" + registration.ToString() + "\nLodging: $" + lodging.ToString() + "\nTotal: $" + total.ToString();
+            string result;
+            result = "Registration: $" + registration.ToString() + "\nLodging: $" + lodging.ToString() + "\nTotal: $" + total.ToString();
             MessageBox.Show(result);
         }
     }
