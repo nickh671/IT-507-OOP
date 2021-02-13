@@ -33,6 +33,7 @@ namespace Hertzog_5_11
         }
 
         //onclick function for the guess button
+        //takes user submitted number, compares it against random number and returns the response
         private void guessButton_Click(object sender, EventArgs e)
         {
             //increment guesses
@@ -78,7 +79,7 @@ namespace Hertzog_5_11
             }
         }
 
-        //get random int
+        //get random int between 1 and 100 (inclusive)
         private int getRandom()
         {
             Random rand = new Random();

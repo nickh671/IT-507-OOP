@@ -130,6 +130,7 @@ namespace Hertozg_6_5
             return total;
         }
 
+        //using all our functions we made to calculate charges, we get the total charges
         private double TotalCharges()
         {
             double total = 0;
@@ -190,6 +191,28 @@ namespace Hertozg_6_5
         }
 
         private void calcButton_Click(object sender, EventArgs e)
+        {
+
+            //this is calculating the cost of JUST the parts so we can subtract it from the services and labor total
+            double partsVal;
+            if (!string.IsNullOrWhiteSpace(partsTextBox.Text) && double.TryParse(partsTextBox.Text, out _))
+            {
+                partsVal = double.Parse(partsTextBox.Text);
+            }
+            else
+            {
+                partsVal = 0;
+            }
+
+            //using our functions to display the final outputs with a string format to round the doubles to 2 decimal places
+            serviceLaborTextBox.Text = String.Format("{0:0.##}", (OilLubeCharges() + FlushCharges() + MiscCharges() + OtherCharges()) - partsVal);
+            partsTotalTextBox.Text = String.Format("{0:0.##}",partsVal.ToString());
+            taxTextBox.Text = String.Format("{0:0.##}", TaxCharges());
+            totalTextBox.Text = String.Format("{0:0.##}", TotalCharges());
+             
+        }
+
+        private void serviceLaborTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

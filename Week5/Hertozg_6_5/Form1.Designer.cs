@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.OLGroup = new System.Windows.Forms.GroupBox();
-            this.oilCheckBox = new System.Windows.Forms.CheckBox();
             this.lubeCheckBox = new System.Windows.Forms.CheckBox();
+            this.oilCheckBox = new System.Windows.Forms.CheckBox();
             this.flushesGroup = new System.Windows.Forms.GroupBox();
-            this.radFlushCheckBox = new System.Windows.Forms.CheckBox();
             this.transFlushCheckBox = new System.Windows.Forms.CheckBox();
+            this.radFlushCheckBox = new System.Windows.Forms.CheckBox();
             this.miscGroupBox = new System.Windows.Forms.GroupBox();
-            this.inspectionCheckBox = new System.Windows.Forms.CheckBox();
-            this.mufflerCheckBox = new System.Windows.Forms.CheckBox();
             this.tireRotationCheckBox = new System.Windows.Forms.CheckBox();
+            this.mufflerCheckBox = new System.Windows.Forms.CheckBox();
+            this.inspectionCheckBox = new System.Windows.Forms.CheckBox();
             this.partsLaborGroup = new System.Windows.Forms.GroupBox();
-            this.partsLabel = new System.Windows.Forms.Label();
-            this.laborLabel = new System.Windows.Forms.Label();
-            this.partsTextBox = new System.Windows.Forms.TextBox();
             this.laborTextBox = new System.Windows.Forms.TextBox();
+            this.partsTextBox = new System.Windows.Forms.TextBox();
+            this.laborLabel = new System.Windows.Forms.Label();
+            this.partsLabel = new System.Windows.Forms.Label();
             this.summaryGroupBox = new System.Windows.Forms.GroupBox();
-            this.serviceLaborLabel = new System.Windows.Forms.Label();
-            this.partLabel = new System.Windows.Forms.Label();
-            this.taxLabel = new System.Windows.Forms.Label();
-            this.totalLabel = new System.Windows.Forms.Label();
-            this.serviceLaborTextBox = new System.Windows.Forms.TextBox();
-            this.partsTotalTextBox = new System.Windows.Forms.TextBox();
-            this.taxTextBox = new System.Windows.Forms.TextBox();
             this.totalTextBox = new System.Windows.Forms.TextBox();
+            this.taxTextBox = new System.Windows.Forms.TextBox();
+            this.partsTotalTextBox = new System.Windows.Forms.TextBox();
+            this.serviceLaborTextBox = new System.Windows.Forms.TextBox();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.taxLabel = new System.Windows.Forms.Label();
+            this.partLabel = new System.Windows.Forms.Label();
+            this.serviceLaborLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
             this.calcButton = new System.Windows.Forms.Button();
@@ -73,16 +73,6 @@
             this.OLGroup.TabStop = false;
             this.OLGroup.Text = "Oil and Lube";
             // 
-            // oilCheckBox
-            // 
-            this.oilCheckBox.AutoSize = true;
-            this.oilCheckBox.Location = new System.Drawing.Point(6, 19);
-            this.oilCheckBox.Name = "oilCheckBox";
-            this.oilCheckBox.Size = new System.Drawing.Size(136, 19);
-            this.oilCheckBox.TabIndex = 0;
-            this.oilCheckBox.Text = "Oil Change ($26.00)";
-            this.oilCheckBox.UseVisualStyleBackColor = true;
-            // 
             // lubeCheckBox
             // 
             this.lubeCheckBox.AutoSize = true;
@@ -92,6 +82,16 @@
             this.lubeCheckBox.TabIndex = 1;
             this.lubeCheckBox.Text = "Lube Job ($18.00)";
             this.lubeCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // oilCheckBox
+            // 
+            this.oilCheckBox.AutoSize = true;
+            this.oilCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.oilCheckBox.Name = "oilCheckBox";
+            this.oilCheckBox.Size = new System.Drawing.Size(136, 19);
+            this.oilCheckBox.TabIndex = 0;
+            this.oilCheckBox.Text = "Oil Change ($26.00)";
+            this.oilCheckBox.UseVisualStyleBackColor = true;
             // 
             // flushesGroup
             // 
@@ -104,16 +104,6 @@
             this.flushesGroup.TabStop = false;
             this.flushesGroup.Text = "Flushes";
             // 
-            // radFlushCheckBox
-            // 
-            this.radFlushCheckBox.AutoSize = true;
-            this.radFlushCheckBox.Location = new System.Drawing.Point(6, 19);
-            this.radFlushCheckBox.Name = "radFlushCheckBox";
-            this.radFlushCheckBox.Size = new System.Drawing.Size(155, 19);
-            this.radFlushCheckBox.TabIndex = 0;
-            this.radFlushCheckBox.Text = "Radiator Flush ($30.00)";
-            this.radFlushCheckBox.UseVisualStyleBackColor = true;
-            // 
             // transFlushCheckBox
             // 
             this.transFlushCheckBox.AutoSize = true;
@@ -123,6 +113,16 @@
             this.transFlushCheckBox.TabIndex = 1;
             this.transFlushCheckBox.Text = "Transmission Flush ($80.00)";
             this.transFlushCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // radFlushCheckBox
+            // 
+            this.radFlushCheckBox.AutoSize = true;
+            this.radFlushCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.radFlushCheckBox.Name = "radFlushCheckBox";
+            this.radFlushCheckBox.Size = new System.Drawing.Size(155, 19);
+            this.radFlushCheckBox.TabIndex = 0;
+            this.radFlushCheckBox.Text = "Radiator Flush ($30.00)";
+            this.radFlushCheckBox.UseVisualStyleBackColor = true;
             // 
             // miscGroupBox
             // 
@@ -136,15 +136,15 @@
             this.miscGroupBox.TabStop = false;
             this.miscGroupBox.Text = "Misc";
             // 
-            // inspectionCheckBox
+            // tireRotationCheckBox
             // 
-            this.inspectionCheckBox.AutoSize = true;
-            this.inspectionCheckBox.Location = new System.Drawing.Point(6, 19);
-            this.inspectionCheckBox.Name = "inspectionCheckBox";
-            this.inspectionCheckBox.Size = new System.Drawing.Size(131, 19);
-            this.inspectionCheckBox.TabIndex = 0;
-            this.inspectionCheckBox.Text = "Inspection ($15.00)";
-            this.inspectionCheckBox.UseVisualStyleBackColor = true;
+            this.tireRotationCheckBox.AutoSize = true;
+            this.tireRotationCheckBox.Location = new System.Drawing.Point(6, 69);
+            this.tireRotationCheckBox.Name = "tireRotationCheckBox";
+            this.tireRotationCheckBox.Size = new System.Drawing.Size(145, 19);
+            this.tireRotationCheckBox.TabIndex = 2;
+            this.tireRotationCheckBox.Text = "Tire Rotation ($20.00)";
+            this.tireRotationCheckBox.UseVisualStyleBackColor = true;
             // 
             // mufflerCheckBox
             // 
@@ -156,15 +156,15 @@
             this.mufflerCheckBox.Text = "Replace Muffler ($100.00)";
             this.mufflerCheckBox.UseVisualStyleBackColor = true;
             // 
-            // tireRotationCheckBox
+            // inspectionCheckBox
             // 
-            this.tireRotationCheckBox.AutoSize = true;
-            this.tireRotationCheckBox.Location = new System.Drawing.Point(6, 69);
-            this.tireRotationCheckBox.Name = "tireRotationCheckBox";
-            this.tireRotationCheckBox.Size = new System.Drawing.Size(145, 19);
-            this.tireRotationCheckBox.TabIndex = 2;
-            this.tireRotationCheckBox.Text = "Tire Rotation ($20.00)";
-            this.tireRotationCheckBox.UseVisualStyleBackColor = true;
+            this.inspectionCheckBox.AutoSize = true;
+            this.inspectionCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.inspectionCheckBox.Name = "inspectionCheckBox";
+            this.inspectionCheckBox.Size = new System.Drawing.Size(131, 19);
+            this.inspectionCheckBox.TabIndex = 0;
+            this.inspectionCheckBox.Text = "Inspection ($15.00)";
+            this.inspectionCheckBox.UseVisualStyleBackColor = true;
             // 
             // partsLaborGroup
             // 
@@ -179,14 +179,19 @@
             this.partsLaborGroup.TabStop = false;
             this.partsLaborGroup.Text = "Parts and Labor";
             // 
-            // partsLabel
+            // laborTextBox
             // 
-            this.partsLabel.AutoSize = true;
-            this.partsLabel.Location = new System.Drawing.Point(49, 23);
-            this.partsLabel.Name = "partsLabel";
-            this.partsLabel.Size = new System.Drawing.Size(35, 15);
-            this.partsLabel.TabIndex = 0;
-            this.partsLabel.Text = "Parts";
+            this.laborTextBox.Location = new System.Drawing.Point(90, 58);
+            this.laborTextBox.Name = "laborTextBox";
+            this.laborTextBox.Size = new System.Drawing.Size(100, 20);
+            this.laborTextBox.TabIndex = 3;
+            // 
+            // partsTextBox
+            // 
+            this.partsTextBox.Location = new System.Drawing.Point(90, 23);
+            this.partsTextBox.Name = "partsTextBox";
+            this.partsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.partsTextBox.TabIndex = 2;
             // 
             // laborLabel
             // 
@@ -197,19 +202,14 @@
             this.laborLabel.TabIndex = 1;
             this.laborLabel.Text = "Labor ($)";
             // 
-            // partsTextBox
+            // partsLabel
             // 
-            this.partsTextBox.Location = new System.Drawing.Point(90, 23);
-            this.partsTextBox.Name = "partsTextBox";
-            this.partsTextBox.Size = new System.Drawing.Size(100, 20);
-            this.partsTextBox.TabIndex = 2;
-            // 
-            // laborTextBox
-            // 
-            this.laborTextBox.Location = new System.Drawing.Point(90, 58);
-            this.laborTextBox.Name = "laborTextBox";
-            this.laborTextBox.Size = new System.Drawing.Size(100, 20);
-            this.laborTextBox.TabIndex = 3;
+            this.partsLabel.AutoSize = true;
+            this.partsLabel.Location = new System.Drawing.Point(49, 23);
+            this.partsLabel.Name = "partsLabel";
+            this.partsLabel.Size = new System.Drawing.Size(35, 15);
+            this.partsLabel.TabIndex = 0;
+            this.partsLabel.Text = "Parts";
             // 
             // summaryGroupBox
             // 
@@ -228,32 +228,38 @@
             this.summaryGroupBox.TabStop = false;
             this.summaryGroupBox.Text = "Summary";
             // 
-            // serviceLaborLabel
+            // totalTextBox
             // 
-            this.serviceLaborLabel.AutoSize = true;
-            this.serviceLaborLabel.Location = new System.Drawing.Point(6, 28);
-            this.serviceLaborLabel.Name = "serviceLaborLabel";
-            this.serviceLaborLabel.Size = new System.Drawing.Size(106, 15);
-            this.serviceLaborLabel.TabIndex = 0;
-            this.serviceLaborLabel.Text = "Service and Labor";
+            this.totalTextBox.Location = new System.Drawing.Point(118, 111);
+            this.totalTextBox.Name = "totalTextBox";
+            this.totalTextBox.ReadOnly = true;
+            this.totalTextBox.Size = new System.Drawing.Size(100, 20);
+            this.totalTextBox.TabIndex = 7;
             // 
-            // partLabel
+            // taxTextBox
             // 
-            this.partLabel.AutoSize = true;
-            this.partLabel.Location = new System.Drawing.Point(77, 58);
-            this.partLabel.Name = "partLabel";
-            this.partLabel.Size = new System.Drawing.Size(35, 15);
-            this.partLabel.TabIndex = 1;
-            this.partLabel.Text = "Parts";
+            this.taxTextBox.Location = new System.Drawing.Point(118, 84);
+            this.taxTextBox.Name = "taxTextBox";
+            this.taxTextBox.ReadOnly = true;
+            this.taxTextBox.Size = new System.Drawing.Size(100, 20);
+            this.taxTextBox.TabIndex = 6;
             // 
-            // taxLabel
+            // partsTotalTextBox
             // 
-            this.taxLabel.AutoSize = true;
-            this.taxLabel.Location = new System.Drawing.Point(30, 84);
-            this.taxLabel.Name = "taxLabel";
-            this.taxLabel.Size = new System.Drawing.Size(82, 15);
-            this.taxLabel.TabIndex = 2;
-            this.taxLabel.Text = "Tax (on parts)";
+            this.partsTotalTextBox.Location = new System.Drawing.Point(118, 55);
+            this.partsTotalTextBox.Name = "partsTotalTextBox";
+            this.partsTotalTextBox.ReadOnly = true;
+            this.partsTotalTextBox.Size = new System.Drawing.Size(100, 20);
+            this.partsTotalTextBox.TabIndex = 5;
+            // 
+            // serviceLaborTextBox
+            // 
+            this.serviceLaborTextBox.Location = new System.Drawing.Point(118, 29);
+            this.serviceLaborTextBox.Name = "serviceLaborTextBox";
+            this.serviceLaborTextBox.ReadOnly = true;
+            this.serviceLaborTextBox.Size = new System.Drawing.Size(100, 20);
+            this.serviceLaborTextBox.TabIndex = 4;
+            this.serviceLaborTextBox.TextChanged += new System.EventHandler(this.serviceLaborTextBox_TextChanged);
             // 
             // totalLabel
             // 
@@ -264,37 +270,32 @@
             this.totalLabel.TabIndex = 3;
             this.totalLabel.Text = "Total Fees";
             // 
-            // serviceLaborTextBox
+            // taxLabel
             // 
-            this.serviceLaborTextBox.Location = new System.Drawing.Point(118, 29);
-            this.serviceLaborTextBox.Name = "serviceLaborTextBox";
-            this.serviceLaborTextBox.ReadOnly = true;
-            this.serviceLaborTextBox.Size = new System.Drawing.Size(100, 20);
-            this.serviceLaborTextBox.TabIndex = 4;
+            this.taxLabel.AutoSize = true;
+            this.taxLabel.Location = new System.Drawing.Point(30, 84);
+            this.taxLabel.Name = "taxLabel";
+            this.taxLabel.Size = new System.Drawing.Size(82, 15);
+            this.taxLabel.TabIndex = 2;
+            this.taxLabel.Text = "Tax (on parts)";
             // 
-            // partsTotalTextBox
+            // partLabel
             // 
-            this.partsTotalTextBox.Location = new System.Drawing.Point(118, 55);
-            this.partsTotalTextBox.Name = "partsTotalTextBox";
-            this.partsTotalTextBox.ReadOnly = true;
-            this.partsTotalTextBox.Size = new System.Drawing.Size(100, 20);
-            this.partsTotalTextBox.TabIndex = 5;
+            this.partLabel.AutoSize = true;
+            this.partLabel.Location = new System.Drawing.Point(77, 58);
+            this.partLabel.Name = "partLabel";
+            this.partLabel.Size = new System.Drawing.Size(35, 15);
+            this.partLabel.TabIndex = 1;
+            this.partLabel.Text = "Parts";
             // 
-            // taxTextBox
+            // serviceLaborLabel
             // 
-            this.taxTextBox.Location = new System.Drawing.Point(118, 84);
-            this.taxTextBox.Name = "taxTextBox";
-            this.taxTextBox.ReadOnly = true;
-            this.taxTextBox.Size = new System.Drawing.Size(100, 20);
-            this.taxTextBox.TabIndex = 6;
-            // 
-            // totalTextBox
-            // 
-            this.totalTextBox.Location = new System.Drawing.Point(118, 111);
-            this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(100, 20);
-            this.totalTextBox.TabIndex = 7;
+            this.serviceLaborLabel.AutoSize = true;
+            this.serviceLaborLabel.Location = new System.Drawing.Point(6, 28);
+            this.serviceLaborLabel.Name = "serviceLaborLabel";
+            this.serviceLaborLabel.Size = new System.Drawing.Size(106, 15);
+            this.serviceLaborLabel.TabIndex = 0;
+            this.serviceLaborLabel.Text = "Service and Labor";
             // 
             // exitButton
             // 
