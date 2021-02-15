@@ -40,14 +40,13 @@ namespace Hertzog_Midterm
             //first we need to calculate the number of bills and pull in the other entered information
             //numbills
             numBills = checkValidInt(numBillsTB.Text);
-            //month
-            month = monthLB.SelectedItem.ToString();
             //totalBudget
             totalBudget = checkValidDouble(totalBudgetTB.Text);
 
             //IF AN ERROR HAS OCCURED WITH THE USER INPUT, THESE WILL BE NULL
-            if(numBills == null || totalBudget == null)
+            if(numBills == null || totalBudget == null || monthLB.SelectedItem == null)
             {
+                //figuring out what reason the code errored
                 string error = "";
                 if (numBills == null)
                 {
@@ -55,8 +54,13 @@ namespace Hertzog_Midterm
                 }
                 if(totalBudget == null)
                 {
-                    error += "Please enter a valid number for your total budget.";
+                    error += "Please enter a valid number for your total budget.\n";
                 }
+                if(monthLB.SelectedItem == null)
+                {
+                    error += "Please enter be sure to select a month from the list.";
+                }
+
 
                 //show the error
                 MessageBox.Show(error);
@@ -64,6 +68,10 @@ namespace Hertzog_Midterm
             }
             else
             {
+                //month
+                month = monthLB.SelectedItem.ToString();
+                //saving the month value in here ONLY if it passes the check above to make sure the user has selected something
+
                 //if no error, proceed
                 //first we will want to disable the number of bills control to prevent any weird errors. Not exactly the most user friendly solution but it will work in this scenario
                 submitBtn.Enabled = false;
@@ -77,19 +85,23 @@ namespace Hertzog_Midterm
         //if valid, returns an int, else returns null
         private int? checkValidInt(string text)
         {
+            //if string is null or empty
             if (String.IsNullOrWhiteSpace(text))
             {
                 return null;
             }
             else
             {
+                //try parsing
                 int temp;
                 if (Int32.TryParse(text, out temp))
                 {
+                    //if parsing return value
                     return temp;
                 }
                 else
                 {
+                    //else return null
                     return null;
                 }
             }
@@ -100,6 +112,7 @@ namespace Hertzog_Midterm
         //if valid, returns an double, else returns null
         private double? checkValidDouble(string text)
         {
+            //logic is the same as the int method above
             if (String.IsNullOrWhiteSpace(text))
             {
                 return null;
@@ -146,7 +159,7 @@ namespace Hertzog_Midterm
                 {
                     enterBillBtn.Enabled = false;
                     //navigate to function to display results
-                    displayResult();
+                    displayResult(); 
                 }
             }
                 
@@ -159,6 +172,7 @@ namespace Hertzog_Midterm
             resultBudgetTB.Text = totalBudget.ToString();
             resultNumBillsTB.Text = numBills.ToString();
             totalSpentTB.Text = billTotal.ToString();
+            //finding the verdict if user was over/under/on budget
             if(billTotal > totalBudget)
             {
                 verdictTB.Text = "Over budget";
@@ -175,6 +189,30 @@ namespace Hertzog_Midterm
                 verdictTB.BackColor = Color.LightGray;
             }
 
+
+        }
+
+        //function to reset the program back to the initial starting point
+        //basically resets all ui components to empty and all variables to 0 or null
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            verdictTB.Text = null;
+            verdictTB.BackColor = Color.Black;
+            totalSpentTB.Text = null;
+            monthTB.Text = null;
+            resultBudgetTB.Text = null;
+            resultNumBillsTB.Text = null;
+            billTB.Text = null;
+            monthLB.SelectedItem = null;
+            totalBudgetTB.Text = null;
+            numBillsTB.Text = null;
+            numBills = 0;
+            totalBudget = 0;
+            billTotal = 0;
+            billCount = 0;
+            month = null;
+            enterBillBtn.Enabled = false;
+            submitBtn.Enabled = true;
 
         }
     }

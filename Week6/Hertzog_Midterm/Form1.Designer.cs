@@ -51,6 +51,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.monthTB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.budgetGB.SuspendLayout();
             this.billsGB.SuspendLayout();
             this.resultGB.SuspendLayout();
@@ -185,6 +186,7 @@
             // 
             // resultGB
             // 
+            this.resultGB.Controls.Add(this.refreshBtn);
             this.resultGB.Controls.Add(this.verdictTB);
             this.resultGB.Controls.Add(this.label8);
             this.resultGB.Controls.Add(this.totalSpentTB);
@@ -205,6 +207,7 @@
             // 
             // verdictTB
             // 
+            this.verdictTB.BackColor = System.Drawing.Color.Black;
             this.verdictTB.Location = new System.Drawing.Point(379, 56);
             this.verdictTB.Name = "verdictTB";
             this.verdictTB.ReadOnly = true;
@@ -288,6 +291,16 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Month:";
             // 
+            // refreshBtn
+            // 
+            this.refreshBtn.Location = new System.Drawing.Point(379, 93);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(100, 23);
+            this.refreshBtn.TabIndex = 10;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = true;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +346,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox totalSpentTB;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button refreshBtn;
     }
 }
 
